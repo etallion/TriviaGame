@@ -1,0 +1,37 @@
+body{
+    text-align: center;
+    background-image: url("https://www.pbs.org/wgbh/nova/media/original_images/nova-wonders-whats-the-universe-made-of-hero_WxVWP1e.jpg");
+}
+
+#gameBoard{
+    position: absolute;
+    left : 20%;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color : white;
+    height: 600px;
+    width: 60%;
+    min-width: 320px;
+    margin: 10px 5px 0px 5px;
+    padding: 10px 0px 10px 0px;
+}
+
+#question{
+    color: white;
+    height : 120px
+}
+
+#options{
+    color: white;
+    height : 380px;
+}
+
+@media only screen and (max-width: 500px)  {
+
+    #gameBoard{
+        left : 5%;
+        width: 90%;
+        min-width: 320px;
+    }
+
+}
