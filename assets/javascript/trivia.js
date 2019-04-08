@@ -65,7 +65,8 @@ var trivia = {
         trivia.currentTime = 15;
         trivia.intervalObj = setInterval(trivia.displayTimer, 1000);
 
-        $("#startBtn").addClass("hidden");
+        // $("#startBtn").addClass("hidden");
+        $("#displayBtn").addClass("hidden");
        trivia.$questionDiv.empty();
        trivia.$questionDiv.html("<h2>" + (trivia.count+1) + ". " + trivia.main[trivia.count].question);
 
@@ -182,7 +183,8 @@ var trivia = {
         trivia.$optionsDiv.append("<br>Wrong Answers : " + trivia.wrong);
 
         trivia.count = 0;
-        $("#startBtn").removeClass("hidden");
+        $("#displayBtn").removeClass("hidden");
+        // $("#startBtn").removeClass("hidden");
         clearTimeout(trivia.timerObj);
     },
     timer : function (){
