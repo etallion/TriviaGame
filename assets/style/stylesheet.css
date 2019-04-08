@@ -7,6 +7,7 @@ header{
     color : white;
     height: 30px;
     width: 100%;
+    padding: 0px 10px 5px 20px;
 }
 
 img{
@@ -30,8 +31,8 @@ img{
 }
 #displayBtn{
     position: absolute;
-    left: 45%;
-    top: 25%;
+    width: 100%;
+    top: 38%;
     z-index: 2;
     text-align: center;
     opacity: 2;
@@ -55,8 +56,8 @@ img{
     height: 600px;
     width: 60%;
     min-width: 320px;
-    margin: 30px 5px 0px 5px;
-    padding: 50px 0px 10px 0px;
+    margin: 10px 5px 0px 5px;
+    padding: 5px 0px 10px 0px;
 }
 
 #question{
@@ -95,10 +96,18 @@ img{
 
 .correct{
     color : green;
+    font-size: 26px;
+    text-align: left;
+    padding: 5px 30px 5px 75px;
+    margin: 5px 0p opx 0px;
 }
 
 .wrong{
     color : red;
+    font-size: 26px;
+    text-align: left;
+    padding: 5px 30px 5px 75px;
+    margin: 5px 0p opx 0px;
 }
 
 @media only screen and (max-width: 500px)  {

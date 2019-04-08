@@ -5,17 +5,17 @@
 
 var trivia = {
     main : [{question : "What is the smallest planet in our solar system?",
-            ansOptions : ["Earth", "Mercury", "Venus", "Alderann"],
+            ansOptions : ["Earth", "Mercury", "Venus", "Alderaan"],
             correct : 1,
             tag : "Mercury"
             },
              {question : "What is the most common type of star found in the Milky Way?",
-             ansOptions : ["Red dwarf stars", "sunials", "White dwarf stars", "twinkle stars"],
+             ansOptions : ["Red dwarf stars", "Sundials", "White dwarf stars", "Twinkle Stars"],
              correct : 0,
              tag : "Red%20Dwarf%20star"
              },
              {question : "What is the closest star to the Sun?",
-             ansOptions : ["Promixa Centauri", "sunials", "White dwarf stars", "twinkle stars"],
+             ansOptions : ["Promixa Centauri", "Stella Vicina", "Lady Gaga", "Galileo Nebula "],
              correct : 0,
              tag : "galaxy"
              },
@@ -36,16 +36,16 @@ var trivia = {
              },
              {question : "What flavor ice cream did Baskin-Robbins release in 1969 to commemorate America’s landing on the moon?",
              ansOptions : ["Milky Way Rocket Pop", "Rocky Caramel Moon ", "Lunar Cheesecake", "Astronaut Ice Cream"],
-             correct : 0,
+             correct : 2,
              tag : "cheesecake%20ice%20cream"
              },
              {question : "The size of the Earth's moon is what percentage of the size of the Earth?",
              ansOptions : ["Less than 1%", "15%", "27%", "100%, they are the same size"],
-             correct : 0,
+             correct : 2,
              tag : "earth%20moon"
-             }, {question : "What ?",
-             ansOptions : ["Red dwarf stars", "sunials", "White dwarf stars", "twinkle stars"],
-             correct : 0,
+             }, {question : "How long is an astronomical unit?",
+             ansOptions : ["Earth's average distance from the Sun", "149.6 million kilometers", "93 million miles", "All the above"],
+             correct : 3,
              tag : "black%20hole"
              }],
     init : function (){
@@ -61,8 +61,8 @@ var trivia = {
         // start timer
         clearInterval(trivia.intervalObj);
         clearTimeout(trivia.timerObj);
-        trivia.interval = 10;
-        trivia.currentTime = 10;
+        trivia.interval = 15;
+        trivia.currentTime = 15;
         trivia.intervalObj = setInterval(trivia.displayTimer, 1000);
 
         $("#startBtn").addClass("hidden");
@@ -83,8 +83,8 @@ var trivia = {
         // start timer
         clearInterval(trivia.intervalObj);
         clearTimeout(trivia.timerObj);
-        trivia.interval = 10;
-        trivia.currentTime = 10;
+        trivia.interval = 15;
+        trivia.currentTime = 15;
         trivia.intervalObj = setInterval(trivia.displayTimer, 1000);
 
 
@@ -115,8 +115,8 @@ var trivia = {
             if(trivia.main[trivia.count].correct !== i){
                 console.log('Found');
                 var $temp = $('.opt' + i +'');
-                $temp.addClass("hidden");
-                
+                //$temp.addClass("hidden");
+                $temp.remove();
             }
         }
 
@@ -128,6 +128,7 @@ var trivia = {
             console.log("correct : "+ parseInt(event));
             var $temp = $('.opt' + parseInt(event) + '');
             $temp.addClass("correct");
+            $temp.removeClass("myOptions");
         } else {
             //wrong answer
             trivia.$optionsDiv.prepend("Wrong, the correct answer is :")
@@ -135,6 +136,7 @@ var trivia = {
             console.log("false : "+ parseInt(event));
             var $temp = $('.opt' + trivia.main[trivia.count].correct +'');
             $temp.addClass("wrong");
+            $temp.removeClass("myOptions");
         }
 
         //create and declare query address for a randon gif with api key
