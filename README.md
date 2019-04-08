@@ -6,4 +6,4 @@ In this assignment, I created a Trivia game using JavaScript for the logic and j
 
 ### Option Two: Advanced Assignment (Timed Questions)
 
-![Advanced](assests/images/triviaThumbnail.jpg)
+![Advanced](assets/images/triviaThumbnail.png)
