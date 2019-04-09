@@ -165,11 +165,11 @@ var trivia = {
         trivia.$optionsDiv.append(image);
         });
 
-        trivia.interval = 3;
-        trivia.currentTime = 3;
+        trivia.interval = 5;
+        trivia.currentTime = 5;
        // trivia.timerObj = 
         setTimeout(function(){
-            console.log("set 3 second timer");
+            console.log("set 5 second timer");
             trivia.nextQuestion();
         }, (1000 * parseInt(trivia.interval)));
 
